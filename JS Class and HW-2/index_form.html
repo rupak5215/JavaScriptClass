@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form using Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        /* .star{
+            width: 0px;
+            height: 0px;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid blue;
+            position: relative;
+        }
+
+        .star::after{
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid rgb(255, 0, 43);
+            position: absolute;
+            content: " ";
+            top: 30px;
+            left: -50px;
+        } */
+
+    .star{
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid red;
+      position: relative;
+    }
+    .star:after {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid red;
+      position: absolute;
+      content: "";
+      top: 30px;
+      left: -50px;
+    }
+    .Ad_Underline::after{
+      display: inline-block;
+     }
+
+    .Ad_Underline::after{
+      width: 0;
+      height: 10;
+      display: flex;
+      justify-content: center;
+      border-bottom: 3px solid red;
+      /* position: absolute; */
+      content: " ";
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="col-lg-8 ">
+                <div class="row text-center">
+                    <h3 class="text-success Ad_Underline">Admission Form</h3>
+                    <p>This is a test form template using Bootstrap</p>
+                </div>
+                <div class="row">
+                    <div class="">
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
