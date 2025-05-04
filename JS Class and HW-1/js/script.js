@@ -34,13 +34,15 @@ if (total>=1000) {
 }
 
 
-
-
-
-
-
-
-
+// let year = prompt('Enter the year');
+ 
+// // Leap years are divisible by 400 or by 4 but not 100
+// if(year % 4 == 0){
+// // if((year % 400 == 0) || ((year % 100 != 0) && (year % 4 == 0))){
+//     alert(year + " is a leap year.");
+// } else{
+//     alert(year + " is not a leap year.");
+// }
 
 
 
@@ -72,3 +74,21 @@ if (total>=1000) {
 // let str = userName;
 // console.log(userName);
 // console.log("@" + userName + str.length);
+
+
+
+
+function myFunction(firstName){
+    console.log(`My name is ${firstName}`);
+}
+
+myFunction('Ali');
+myFunction('Selim');
+
+function myMath(p1, p2){
+    return (p1 * p2)
+}
+
+let result = myMath(15, 6);
+console.log(result)
+document.getElementById('demo').innerText = result;
