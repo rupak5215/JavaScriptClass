@@ -22,7 +22,7 @@ function income_tax(salary, tax_rate){
 
     document.writeln(`Yearly Salary of the Employee is ${yearly_salary} and according to Govt. rules, this is a taxable income and he have to pay ${tax_rate*100}% tax from his annual income`);
     document.writeln('<br>')
-    document.writeln(`Finally, The Employee have to pay ${annual_income_tax} annually as income tax`); 
+    document.writeln(`<b>Finally, The Employee have to pay ${annual_income_tax} annually as income tax.</b>`); 
     }
 
     let Monthly_Salary = prompt('Enter Monthly Salary');
