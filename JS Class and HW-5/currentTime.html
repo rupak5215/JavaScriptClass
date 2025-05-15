@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Time Display</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .container{
+            background-image: linear-gradient(green, rgb(139, 245, 234), white);
+            background-size: cover;
+            background-repeat: repeat;
+            height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center py-lg-5">
+            <div class="col-lg-2">
+                <div class="row flex-column border border-1 rounded-3 mx-4">
+                    <div class="col d-flex justify-content-center fs-5 text-warning mt-3 fw-bolder" id="yearFull">
+                    </div>
+                    <div class="col d-flex justify-content-center mt-2 text-white">
+                        <p>Year</p> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="row flex-column border border-1 rounded-3 mx-4">
+                    <div class="col d-flex justify-content-center fs-5 text-warning mt-3 fw-bolder" id="monthFull">
+                    </div>
+                    <div class="col d-flex justify-content-center mt-2 text-white">
+                        <p>Month</p> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="row flex-column border border-1 rounded-3 mx-4">
+                    <div class="col d-flex justify-content-center fs-5 text-warning mt-3 fw-bolder" id="dayFull">
+                    </div>
+                    <div class="col d-flex justify-content-center mt-2 text-white">
+                        <p>Day</p> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="row flex-column border border-1 rounded-3 mx-4">
+                    <div class="col d-flex justify-content-center fs-5 text-warning mt-3 fw-bolder" id="hourFull">
+                    </div>
+                    <div class="col d-flex justify-content-center mt-2 text-white">
+                        <p>Hours</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                    <div class="row flex-column border border-1 rounded-3 mx-4">
+                        <div class="col d-flex justify-content-center fs-5 text-warning mt-3 fw-bolder" id="minutesFull">
+                        </div>
+                        <div class="col d-flex justify-content-center mt-2 text-white">
+                            <p>Minutes</p> 
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-2">
+                    <div class="row flex-column border border-1 rounded-3 mx-4">
+                        <div class="col d-flex justify-content-center fs-5 text-warning mt-3 fw-bolder" id="secondFull">
+                        </div>
+                        <div class="col d-flex justify-content-center mt-2 text-white">
+                            <p>Secound</p> 
+                        </div>
+                    </div>
+            </div>
+        </div>    
+    </div>
+    <script>
+        const d = new Date();
+
+        document.getElementById("yearFull").innerHTML = d.getFullYear();
+
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        let month = months[d.getMonth()];
+        document.getElementById("monthFull").innerHTML = months[d.getMonth()];
+
+        document.getElementById("dayFull").innerHTML = d.getDate();
+        document.getElementById("hourFull").innerHTML = d.getHours();
+        document.getElementById("minutesFull").innerHTML = d.getMinutes();
+        document.getElementById("secondFull").innerHTML = d.getSeconds();
+    </script>
+
+</body>
+</html>
