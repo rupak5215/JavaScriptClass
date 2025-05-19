@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .green{
+        color: white;
+        background-color: green;
+        padding: 15px;
+    }
+</style>
+
+</head>
+<body>
+    <h1>DOM Methods</h1>
+    <p id="main">Hello World</p>
+    <p class = 'green'>This is the 1<sup>st</sup> green Paragraph</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo dolorum beatae in debitis rerum consequuntur, explicabo ullam quibusdam ipsum ab reprehenderit maxime illum, fugit consectetur</p>
+    <p class = 'green'>This is the 2<sup>nd</sup> green Paragraph</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quam at consequuntur, quidem itaque ratione dolores placeat iste aliquid numquam non quibusdam minima, necessitatibus fugit vitae quisquam fuga repellat. Numquam!</p>
+    <p class = 'green'>This is the 3<sup>rd</sup> green Paragraph</p>
+
+
+    <script>
+        // let h1 = document.querySelector('h1');
+
+        // h1.style.color= 'green';
+
+
+        // let para1 = document.getElementById('main');
+        // console.log(para1);
+        // // para1.innerHTML = "<strong>New Content </strong>";
+        // para1.innerHTML = "<em> Hello JavaScript </em>";
+        // para1.style.color = "red";
+        // para1.style.backgroundColor = 'yellow';
+
+        let greenPara = document.getElementsByClassName('green');
+        // console.log(greenPara);
+        console.log(greenPara[2]);
+    </script>
+</body>
+</html>
