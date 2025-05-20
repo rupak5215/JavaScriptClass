@@ -4,4 +4,5 @@ let main_div = document.getElementById ('main');
 
 main_div.innerHTML="Hello World";
 
-console.log(document);
+console.log(document.links[3]); 
+
