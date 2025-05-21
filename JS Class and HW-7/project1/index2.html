@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding-top: 80px; /* Adjust based on banner height */
+}
+
+.welcome-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007bff; /* Changed to blue for "Page Loaded" feel */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Hidden by default, JavaScript will show it */
+    animation: fadeIn 1s ease-out; /* Simple fade-in animation */
+    z-index: 100;
+}
+
+.welcome-banner h2 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.welcome-banner button {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+}
+
+.welcome-banner button:hover {
+    color: #f0f0f0;
+}
+
+main {
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+    </style>
+</head>
+<body>
+    <div id="welcomeBanner" class="welcome-banner">
+        <h2 id="bannerMessage"></h2>
+        <button id="closeBanner">X</button>
+    </div>
+
+    <main>
+        <h1>Content Loaded!</h1>
+        <p>This is the main content of your page, which has now fully loaded.</p>
+        <p>Scroll down to see more...</p>
+    </main>
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const welcomeBanner = document.getElementById('welcomeBanner');
+    const bannerMessage = document.getElementById('bannerMessage');
+    const closeBannerBtn = document.getElementById('closeBanner');
+
+    // Set the message to indicate page load
+    bannerMessage.textContent = 'Page Loaded Successfully!';
+
+    // Display the banner immediately after DOM content is loaded
+    welcomeBanner.style.display = 'block';
+
+    // Close the banner when the close button is clicked
+    closeBannerBtn.addEventListener('click', () => {
+        welcomeBanner.style.display = 'none';
+        // Optional: add a fade-out animation here if desired
+    });
+
+    // Optional: Auto-hide the banner after a few seconds
+    setTimeout(() => {
+        welcomeBanner.style.display = 'none';
+        // For a smoother fade-out, you could add a CSS class that triggers a transition
+        // welcomeBanner.classList.add('fade-out');
+    }, 4000); // Hide after 4 seconds
+});
+
+    </script>
+</body>
+</html>
