@@ -1,0 +1,11 @@
+h3, h1{
+    text-align: center;
+    color:rgb(0, 56, 238);
+}
+
+body{
+    background: linear-gradient(pink, skyblue, blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
