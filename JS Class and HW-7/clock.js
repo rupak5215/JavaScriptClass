@@ -29,11 +29,15 @@ function showTime(){
     // let currentTime = '<span class = "hour">'+hour+'</span>:'+min+':'+ sec + am_pm ;
     //Displaying the time
     document.getElementById('clock').innerHTML = currentTime;
+<<<<<<< HEAD
     
 
 
     // let hourColor = document.querySelector("#clock");
     // hourColor.style.color="red";
+=======
+   
+>>>>>>> 3d9986cb57fe43093d8c358d900f2a1d0fb0baa1
 
 }
 
