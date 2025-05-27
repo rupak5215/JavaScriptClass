@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project with Image using HTML, CSS & JavaScript</title>
+    <style>
+        body{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(224, 251, 253);
+        }
+        h1{
+            text-align: center;
+            color:rgb(4, 0, 241);
+            margin-bottom: 50px;
+        }
+
+        .imageContainer{
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        img{
+            width: 400px;
+            border-radius: 8px;
+            border: 5px solid rgb(0, 176, 230);
+        }
+
+        button{
+            padding: 15px 35px;
+            background-color: aquamarine;
+            font-size: 1.2rem;
+            border: none;
+            margin-top: 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family:Georgia, 'Times New Roman', Times, serif
+        }
+        button:hover{
+            background-color: rgba(127, 255, 212, 0.678);
+            font-size: 1.2rem;
+            box-shadow: 1px 1px 15px rgb(59, 59, 59);
+        }
+        .btn-style{
+            display: flex; 
+            justify-content: center;
+        }
+
+        #img1{
+            order:1;
+            color : green;
+            font-weight:bolder;
+            font-size: large;
+        }
+
+        #img2{
+            order:2;
+            color : rgb(92, 0, 128);
+            font-weight:bolder;
+            font-size: large;
+        }
+
+        #btn-2{
+            display: none;
+        }
+</style>
+
+
+</head>
+<body>
+    <h1>Project with Image using HTML, CSS & JavaScript</h1>
+    <div class="imageContainer">
+        <div id = "img1" > <p> Image # 1 </p> <br>
+            <img src="Images/img7.jpg" alt="">
+        </div>
+        <div id = "img2"> <p> Image # 2 </p>  <br>
+            <img  src="Images/img1.jpg" alt="">
+        </div>
+
+    </div>
+    <div class="btn-style">
+        <button id="btn-1" onclick="imageChange()">Click to Switch the image 1 to 2</button>
+        <button id="btn-2" onclick="imageChange2()">Click to Switch the image 2 to 1</button>
+    </div>
+        
+    <script>
+        let image1 = document.querySelector('#img1');
+        let image2 = document.querySelector('#img2');
+        let btn1 = document.querySelector('#btn-1');
+        let btn2 = document.querySelector('#btn-2');
+
+//-------------------------------------------------------------------
+// Version # 1 using onclick function
+//-------------------------------------------------------------------
+    // function imageChange(){
+    //         image1.style.order = 2;
+    //         image2.style.order = 1;
+    //         btn1.style.display = "none";
+    //         btn2.style.display = "block";
+    //     };
+
+    // function imageChange2(){
+    //         image1.style.order = 1;
+    //         image2.style.order = 2;
+    //         btn1.style.display = "block";
+    //         btn2.style.display = "none";
+    //     };
+
+
+
+//-------------------------------------------------------------------
+// Version # 2 using .addEventListener
+//-------------------------------------------------------------------
+        btn1.addEventListener('click', function(){
+            image1.style.order = 2;
+            image2.style.order = 1;
+            btn1.style.display = "none";
+            btn2.style.display = "block";
+        });
+
+        btn2.addEventListener('click', function(){
+            image1.style.order = 1;
+            image2.style.order = 2;
+            btn1.style.display = "block";
+            btn2.style.display = "none";
+        });
+
+        
+    </script>
+</body>
+</html>
