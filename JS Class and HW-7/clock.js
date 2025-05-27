@@ -28,11 +28,7 @@ function showTime(){
 
     //Displaying the time
     document.getElementById('clock').innerHTML = currentTime;
-    
-
-
-    let hourColor = document.querySelector("#clock");
-    hourColor.style.color="red";
+   
 
 }
 
